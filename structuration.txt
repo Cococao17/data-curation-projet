@@ -1,0 +1,5 @@
+datacuration/
+├── data_mining_sentiment_analysis_Twitter_Facebook.csv
+├── index.html
+├── README.md
+└── structuration.txt
