@@ -24,7 +24,7 @@ La récupération du jeu de données a été récolté sur Google Scholar. Le je
 La récolte de données a été effectué avec un script créé avec le langage R. Un fichier CSV est fourni à la fin de l'exécution du script.
 
 #### Information sur le jeu de données
-##### Nom du fichier
+##### Nom du fichier :
 data_mining_sentiment_analysis_Twitter_Facebook.csv
 
 ##### Liste des attributs :
@@ -53,8 +53,8 @@ Concernant le readme, la structure de celui-ci a été fait avec l'application w
 
 
 ### Découvrabilité et interopérabilité sur le Web
-Une page Web a été effectué avec Schema.org (voir page Web [ici](https://cococao17.github.io/data-curation-projet/)). 
+Une page Web a été effectué avec Schema.org (voir page Web [ici](https://cococao17.github.io/data-curation-projet/)). L'outil d'aide à balisage de Google a été utilisé pour cela (voir outil [ici](https://www.google.com/webmasters/markup-helper/)).
 
-L'indexation a été faite sur Google Search.
+L'indexation a été faite sur vérifier avec Google Search (voir outil [ici](https://search.google.com/test/rich-results)).
 
 Le jeu de donnée a été diffusé sur le dépôt centralisé, Zenodo (voir jeu de données [ici](https://zenodo.org/record/7979378)), et est sous licence Creative Commons Attribution 4.0 International et en Open Access.
