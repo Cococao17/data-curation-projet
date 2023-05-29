@@ -53,7 +53,7 @@ Concernant le readme, la structure de celui-ci a été fait avec l'application w
 
 
 ### Découvrabilité et interopérabilité sur le Web
-Une page Web a été effectué avec Schema.org (voir page Web [ici](https://data-curation.000webhostapp.com/)). 
+Une page Web a été effectué avec Schema.org (voir page Web [ici](https://cococao17.github.io/data-curation-projet/)). 
 
 L'indexation a été faite sur Google Search.
 
