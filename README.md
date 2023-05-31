@@ -27,7 +27,7 @@ La récolte de données a été effectué avec un script créé avec le langage 
 ##### Nom du fichier :
 data_mining_sentiment_analysis_Twitter_Facebook.csv
 
-##### Liste des attributs :
+##### Liste des attributs du scrapping :
 - titles, titre du fichier PDF
 - authors, auteurs du fichier PDF
 - years, année de création du fichier PDF
@@ -46,6 +46,33 @@ Le logiciel OpenRefine a été utilisé pour l'extraction du contenu et des mét
 
 ### Macro-transformations
 La création du nouveau jeu de données a été faite avec OpenRefine à la fin de chaque étape de la micro-transformations.
+
+Les colonnes du jeux de données : 
+- titles, titre du fichier PDF
+- all_authors, auteurs du fichier PDF 
+- authors_meta : les auteurs à partir des métas
+- authors_meta_1 : l'auteur n°1 des métas
+- author1_meta_genre : le genre de l'auteur n° 1 des métas (avec réconciliations) 
+- author1_meta_occupation : le métier de l'auteur n° 1 des métas (avec réconciliations) 
+- authors_meta_2 : l'auteur n°2 des métas
+- authors_meta_3 : l'auteur n°3 des métas
+- authors_meta_4 : l'auteur n°4 des métas
+- authors_meta_5 : l'auteur n°5 des métas
+- authors_meta_6 : l'auteur n°6 des métas
+- authors_meta_7 : l'auteur n°7 des métas
+- authors_meta_8 : l'auteur n°8 des métas
+- authors_meta_9 : l'auteur n°9 des métas
+- ORCID_authors : orc id des auteurs avec la requête API crossref
+- years, année de création du fichier PDF
+- doi_sans_url : doi des articles (depuis le plein texte, sans url pour lancer la requête avec crossref)
+- DOI : le lien du DOI
+- cross_doi : résulat en JSON de la requête avec l'API crossRef
+- ncitedby, nombre de citation
+- linkfiles, liens du fichier PDF
+- plein_text : le plein texte du pdf (récupéré avec Tika)
+- Abstract : l'abstract de l'article (récupéré dans le plein texte)
+- meta_donnees : les métas données (récupéré avec Tika)
+- language : la langue (récupéré depuis les métas données)
 
 L'outil DMPTool a permis de créer la représentation de la structuration des répertoires et des fichiers.
 
