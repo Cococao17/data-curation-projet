@@ -48,8 +48,8 @@ Le logiciel OpenRefine a été utilisé pour l'extraction du contenu et des mét
 La création du nouveau jeu de données a été faite avec OpenRefine à la fin de chaque étape de la micro-transformations.
 
 Les colonnes du jeux de données : 
-- titles, titre du fichier PDF
-- all_authors, auteurs du fichier PDF 
+- titles : titre du fichier PDF
+- all_authors : auteurs du fichier PDF 
 - authors_meta : les auteurs à partir des métas
 - authors_meta_1 : l'auteur n°1 des métas
 - author1_meta_genre : le genre de l'auteur n° 1 des métas (avec réconciliations) 
@@ -67,7 +67,7 @@ Les colonnes du jeux de données :
 - doi_sans_url : doi des articles (depuis le plein texte, sans url pour lancer la requête avec crossref)
 - DOI : le lien du DOI
 - cross_doi : résulat en JSON de la requête avec l'API crossRef
-- ncitedby, nombre de citation
+- ncitedby : nombre de citation
 - linkfiles, liens du fichier PDF
 - plein_text : le plein texte du pdf (récupéré avec Tika)
 - Abstract : l'abstract de l'article (récupéré dans le plein texte)
