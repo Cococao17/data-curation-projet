@@ -1,0 +1,102 @@
+
+-----------------------------------------------------
+ -- Expressions régulières en Jython/Python et GREL --
+ -- Data curation 2023, projet --
+-----------------------------------------------------
+
+-----------------------------------------------------
+1. 
+-----------------------------------------------------
+import re
+
+def extract_metadata(value):
+    metadata = re.findall(r'"([^"]+)"', value)
+    return '|'.join(metadata)
+
+return extract_metadata(value)
+
+-----------------------------------------------------
+2. Trouver le DOI
+-----------------------------------------------------
+if(value.contains("doi.org/"), value.split("doi.org/")[1].split("<")[0], "")
+value.replace(/\/>".*$/, "")
+
+-----------------------------------------------------
+3. Trouver le langue
+-----------------------------------------------------
+def extract_language(value):
+  lines = value.split('\n')
+  for line in lines:
+    match = re.match(r'"language","([^"]+)"', line)
+    if match:
+      return match.group(1)
+
+return extract_language(value)
+
+-----------------------------------------------------
+4. Trouver l'abstract
+-----------------------------------------------------
+import re
+
+def extract_abstract_to_introduction(value):
+    match = re.search(r"(?i)ABSTRACT(.*?)INTRODUCTION", value, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+    else:
+        return ""
+
+return extract_abstract_to_introduction(value)
+
+-----------------------------------------------------
+5. Supprimer <p> </p>
+-----------------------------------------------------
+def remove_html_tags(value):
+    value = value.replace("</p>", "")
+    value = value.replace("<p>", "")
+    return value
+
+return remove_html_tags(value)
+
+-----------------------------------------------------
+6. Ligne vide en N/A et mettre en majuscule 
+-----------------------------------------------------
+if(value != null, value.toUppercase(), "N/A")
+
+-----------------------------------------------------
+7. Modifier le format date jj/mm/yyyy et si vide en N/A
+----------------------------------------------------- 
+if(value != null, value.substring(8, 10) + "-" + value.substring(5, 7) + "-" + value.substring(0, 4), "N/A")
+
+-----------------------------------------------------
+8. Requête sur API de crossref avec le DOI
+----------------------------------------------------- 
+"https://api.crossref.org/works/"+value
+
+-----------------------------------------------------
+9.Garder que n° DOI et supprimer les espaces
+-----------------------------------------------------
+value.replace("https://doi.org/", "")
+value.split(" ")[0]
+
+-----------------------------------------------------
+10.Supprimer certaines infos des lignes 
+-----------------------------------------------------
+value.replace(/\.$/, '') //point
+value.replace(/>https.*/, '') //>https
+value.replace(/this.*/, '') //this
+value.replace("/>.*", "")
+value.replace(/ï.*/, '')
+value.replace(/>http:\/\/dx.*/, "")
+value.replace("\"", "")
+value.replace(/This.*/, '')
+value.replace('N/A', '')
+
+-----------------------------------------------------
+11.Chercher les ORCID et les joindre
+-----------------------------------------------------
+forEach(value.parseJson().message.author, v, v.ORCID).join(",")
+
+-----------------------------------------------------
+12.Mettre "https://doi.org/" devant code DOI
+-----------------------------------------------------
+if(value != "N/A", "https://doi.org/" + value, value)
