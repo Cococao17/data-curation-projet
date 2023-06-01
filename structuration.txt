@@ -1,5 +1,11 @@
 datacuration/
+├── extraction-pdf/
+│   ├── main.py
+│   └── pdf.csv
 ├── data_mining_sentiment_analysis_Twitter_Facebook.csv
+├── expression régulières - data curation
 ├── index.html
+├── LICENSE
 ├── README.md
+├── scrapping.R
 └── structuration.txt
